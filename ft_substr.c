@@ -6,7 +6,7 @@
 /*   By: fernanda <fernanda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 09:18:25 by fernanda          #+#    #+#             */
-/*   Updated: 2022/05/18 17:41:48 by fernanda         ###   ########.fr       */
+/*   Updated: 2022/05/20 15:03:23 by fernanda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 }
 
 
-#include <stdio.h>
+/*#include <stdio.h>
 
 int main(void)
 {
@@ -51,4 +51,4 @@ int main(void)
 	printf("%s\n", ft_substr(teste, aux, tam));
 		
 	return (0);
-}
+}*/
