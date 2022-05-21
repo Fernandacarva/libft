@@ -1,32 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ferncarv <ferncarv@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/05 11:41:11 by ferncarv          #+#    #+#             */
-/*   Updated: 2022/05/07 13:59:33 by ferncarv         ###   ########.fr       */
+/*   Created: 2022/05/04 14:59:18 by ferncarv          #+#    #+#             */
+/*   Updated: 2022/05/17 18:03:08 by ferncarv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-size_t	ft_strlen(const char *s)
+int	ft_isalpha(int c)
 {
-	size_t	len;
-
-	len = 0;
-	while (s[len] != '\0')
-		len++;
-	return (len);
+	return ((c >= 'a' && c <= 'z')
+		|| (c >= 'A' && c <= 'Z'));
 }
-
-/*#include <stdio.h>
-
-int main()
-{
-	char a[20]= "Bom dia!!!";
-
-	printf("Length of string a = %zu \n", ft_strlen(a));
-}*/

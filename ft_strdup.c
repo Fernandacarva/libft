@@ -1,32 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ferncarv <ferncarv@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/05 11:41:11 by ferncarv          #+#    #+#             */
-/*   Updated: 2022/05/07 13:59:33 by ferncarv         ###   ########.fr       */
+/*   Created: 2022/05/11 18:26:21 by ferncarv          #+#    #+#             */
+/*   Updated: 2022/05/17 20:24:10 by ferncarv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+char	*ft_strdup(const char *s1)
 {
 	size_t	len;
+	char	*aux1;
 
-	len = 0;
-	while (s[len] != '\0')
-		len++;
-	return (len);
+	len = ft_strlen(s1) + 1;
+	aux1 = malloc(len);
+	if (aux1)
+	{
+		ft_strlcpy(aux1, s1, len);
+		return (aux1);
+	}
+	return (NULL);
 }
 
-/*#include <stdio.h>
+#include <stdio.h>
 
-int main()
+int main(void)
 {
-	char a[20]= "Bom dia!!!";
+	char	*teste;
 
-	printf("Length of string a = %zu \n", ft_strlen(a));
-}*/
+	teste = "outra frase";
+	printf("%15.p = %s \n", teste, teste);
+	printf("%15.p = %s \n", ft_strdup(teste),ft_strdup(teste));
+	return (0);
+}

@@ -1,32 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ferncarv <ferncarv@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/05 11:41:11 by ferncarv          #+#    #+#             */
-/*   Updated: 2022/05/07 13:59:33 by ferncarv         ###   ########.fr       */
+/*   Created: 2022/05/11 15:55:06 by ferncarv          #+#    #+#             */
+/*   Updated: 2022/05/17 17:56:53 by ferncarv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t	len;
+	const char	*aux1;
 
-	len = 0;
-	while (s[len] != '\0')
-		len++;
-	return (len);
+	aux1 = s;
+	while (n-- > 0)
+	{
+		if (*aux1 == c)
+			return ((char *) aux1);
+		aux1++;
+	}
+	return (NULL);
 }
 
 /*#include <stdio.h>
+#include <string.h>
 
-int main()
+int main(void) 
 {
-	char a[20]= "Bom dia!!!";
+   const char str[] = "fernanda";
+   const char ch = 'd';
+   char *ret;
 
-	printf("Length of string a = %zu \n", ft_strlen(a));
+   ret = ft_memchr(str, ch, ft_strlen(str));
+
+   printf("String after |%c| is - |%s|\n", ch, ret);
+
+   return(0);
 }*/

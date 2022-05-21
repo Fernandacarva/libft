@@ -1,32 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ferncarv <ferncarv@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/05 11:41:11 by ferncarv          #+#    #+#             */
-/*   Updated: 2022/05/07 13:59:33 by ferncarv         ###   ########.fr       */
+/*   Created: 2022/05/07 13:53:54 by ferncarv          #+#    #+#             */
+/*   Updated: 2022/05/09 14:59:25 by ferncarv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	size_t	len;
+	unsigned char	*aux1;
+	unsigned char	*aux2;
 
-	len = 0;
-	while (s[len] != '\0')
-		len++;
-	return (len);
+	aux1 = (unsigned char *)dst;
+	aux2 = (unsigned char *)src;
+	while (n--)
+		*aux1++ = *aux2++;
+	return (dst);
 }
 
 /*#include <stdio.h>
+#include <string.h>*/
 
-int main()
+/*int	main(void)
 {
-	char a[20]= "Bom dia!!!";
+   const char src[50] = "Olá";
+   char dest[50];
 
-	printf("Length of string a = %zu \n", ft_strlen(a));
+   printf("Before memcpy dest = %s\n", dest);
+   ft_memcpy(dest, src, ft_strlen(src)+1);
+   printf("After memcpy dest = %s\n", dest);
+   
+   return(0);
 }*/
