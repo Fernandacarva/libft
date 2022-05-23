@@ -1,32 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ferncarv <ferncarv@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/05 11:41:11 by ferncarv          #+#    #+#             */
-/*   Updated: 2022/05/07 13:59:33 by ferncarv         ###   ########.fr       */
+/*   Created: 2022/05/05 10:25:25 by ferncarv          #+#    #+#             */
+/*   Updated: 2022/05/17 17:55:50 by ferncarv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+int	ft_isprint(int c)
 {
-	size_t	len;
-
-	len = 0;
-	while (s[len] != '\0')
-		len++;
-	return (len);
+	if ((c >= 32) && (c <= 126))
+		return (1);
+	return (0);
 }
-
-/*#include <stdio.h>
-
-int main()
-{
-	char a[20]= "Bom dia!!!";
-
-	printf("Length of string a = %zu \n", ft_strlen(a));
-}*/

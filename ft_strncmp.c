@@ -1,32 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ferncarv <ferncarv@student.42.rio>         +#+  +:+       +#+        */
+/*   By: fernanda <fernanda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/05 11:41:11 by ferncarv          #+#    #+#             */
-/*   Updated: 2022/05/07 13:59:33 by ferncarv         ###   ########.fr       */
+/*   Created: 2022/05/04 17:44:29 by ferncarv          #+#    #+#             */
+/*   Updated: 2022/05/23 15:53:50 by fernanda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
 
-size_t	ft_strlen(const char *s)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	size_t	len;
+	size_t	cont;
 
-	len = 0;
-	while (s[len] != '\0')
-		len++;
-	return (len);
+	cont = 0;
+	while ((s1[cont] || s2[cont]) && cont < n)
+	{
+		if (s1[cont] != s2[cont])
+			return (s1[cont] - s2[cont]);
+		cont++;
+	}
+	return (0);
 }
-
-/*#include <stdio.h>
-
-int main()
-{
-	char a[20]= "Bom dia!!!";
-
-	printf("Length of string a = %zu \n", ft_strlen(a));
-}*/

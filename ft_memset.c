@@ -1,32 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ferncarv <ferncarv@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/05 11:41:11 by ferncarv          #+#    #+#             */
-/*   Updated: 2022/05/07 13:59:33 by ferncarv         ###   ########.fr       */
+/*   Created: 2022/05/05 15:27:11 by ferncarv          #+#    #+#             */
+/*   Updated: 2022/05/07 11:59:45 by ferncarv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+void	*ft_memset(void *b, int c, size_t len)
 {
-	size_t	len;
+	char	*ptr;
 
-	len = 0;
-	while (s[len] != '\0')
-		len++;
-	return (len);
+	ptr = b;
+	while (len-- > 0)
+		*ptr++ = c;
+	return (b);
 }
 
 /*#include <stdio.h>
 
 int main()
 {
-	char a[20]= "Bom dia!!!";
-
-	printf("Length of string a = %zu \n", ft_strlen(a));
+	char b[3] = "123";
+	char c = 'f';
+	
+	printf("%p\n", b);
+	printf("%s\n", ft_memset(b, c, 3));
+	printf("%p\n", b);
+	return (3);
 }*/
