@@ -6,7 +6,7 @@
 /*   By: ferncarv <ferncarv@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 17:33:30 by ferncarv          #+#    #+#             */
-/*   Updated: 2022/05/17 18:17:37 by ferncarv         ###   ########.fr       */
+/*   Updated: 2022/06/01 12:13:58 by ferncarv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	int		i_aux2;
 
 	index = 0;
-	if (needle == NULL)
+	if (*needle == '\0' || needle == NULL)
 		return ((char *)haystack);
 	while (haystack[index] != '\0' && index < len)
 	{
@@ -40,19 +40,3 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (0);
 }
-
-/*#include <stdio.h>
-#include <string.h>
-
-int main(void) 
-{
-   const char haystack[20] = "Tutoria lsPointTest";
-   const char needle[10] = " ";
-   char *ret;
-
-   ret = ft_strnstr(haystack, needle, 20);
-
-   printf("The substring is: %s\n", ret);
-   
-   return(0);
-}*/

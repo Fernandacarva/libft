@@ -6,7 +6,7 @@
 /*   By: ferncarv <ferncarv@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 18:26:21 by ferncarv          #+#    #+#             */
-/*   Updated: 2022/05/17 20:24:10 by ferncarv         ###   ########.fr       */
+/*   Updated: 2022/05/24 11:53:25 by ferncarv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*ft_strdup(const char *s1)
 	return (NULL);
 }
 
-#include <stdio.h>
+/*#include <stdio.h>
 
 int main(void)
 {
@@ -37,4 +37,4 @@ int main(void)
 	printf("%15.p = %s \n", teste, teste);
 	printf("%15.p = %s \n", ft_strdup(teste),ft_strdup(teste));
 	return (0);
-}
+}*/
