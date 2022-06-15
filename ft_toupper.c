@@ -6,9 +6,11 @@
 /*   By: ferncarv <ferncarv@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 13:25:08 by ferncarv          #+#    #+#             */
-/*   Updated: 2022/06/06 16:56:48 by ferncarv         ###   ########.fr       */
+/*   Updated: 2022/06/15 13:35:25 by ferncarv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_toupper(int c)
 {

@@ -6,9 +6,11 @@
 /*   By: ferncarv <ferncarv@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 13:57:33 by ferncarv          #+#    #+#             */
-/*   Updated: 2022/06/06 16:56:43 by ferncarv         ###   ########.fr       */
+/*   Updated: 2022/06/15 13:40:33 by ferncarv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_tolower(int c)
 {
