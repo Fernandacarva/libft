@@ -1,5 +1,5 @@
 <h1 align="center">  
-	libft
+	libft ✔️
 </h1>
 
 <p align="center">
