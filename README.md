@@ -1,6 +1,5 @@
 <h1 align="center">  
-	libft ✔️
-</h1>
+	libft ✅</h1>
 
 <p align="center">
 	<b><i>Minha primeira biblioteca 📚</i></b><br>
